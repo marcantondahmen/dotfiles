@@ -17,7 +17,7 @@ alias dev=fzfProjects
 # Prompt
 autoload -Uz compinit && compinit
 export TERM="xterm-256color" CLICOLOR=1
-export STARSHIP_CONFIG=~/.config/starship.toml
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
