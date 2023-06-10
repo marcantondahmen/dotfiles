@@ -50,3 +50,10 @@ In a last step the new local clone has to be configured to hide untracked files.
 ```bash
 dotfiles config --local status.showUntrackedFiles no
 ```
+
+## Requirements
+
+The following applications should be installed:
+
+- [fzf](https://github.com/junegunn/fzf)
+- [fd](https://github.com/sharkdp/fd)

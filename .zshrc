@@ -12,6 +12,7 @@ fi
 # Aliases
 alias la="ls -la"
 alias dotfiles='/opt/homebrew/bin/git --git-dir=/Users/marcantondahmen/.dotfiles/ --work-tree=/Users/marcantondahmen'
+alias dev=fzfProjects
 
 # Prompt
 autoload -Uz compinit && compinit
@@ -19,3 +20,6 @@ export TERM="xterm-256color" CLICOLOR=1
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# fzf
+source ~/.config/fzf/fzf.zsh
