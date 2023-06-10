@@ -43,4 +43,10 @@ And then finally the files can be checked out:
 dotfiles checkout
 ```
 
-Note that some files might already be existing and therefore an error is expected. Those files have to be removed first.
+> Note that some files might already be existing and therefore an error is expected. Those files have to be removed first.
+
+In a last step the new local clone has to be configured to hide untracked files.
+
+```bash
+dotfiles config --local status.showUntrackedFiles no
+```
