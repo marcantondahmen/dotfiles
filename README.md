@@ -57,3 +57,4 @@ The following applications should be installed:
 
 - [fzf](https://github.com/junegunn/fzf)
 - [fd](https://github.com/sharkdp/fd)
+- [starship](https://starship.rs)
