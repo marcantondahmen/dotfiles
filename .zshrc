@@ -16,6 +16,7 @@ alias dotfiles='/opt/homebrew/bin/git --git-dir=/Users/marcantondahmen/.dotfiles
 alias dotls='dotfiles ls-tree --full-tree --name-only -r HEAD'
 alias dotst='dotfiles status'
 alias dev=fzfProjects
+alias www='sh ~/MAD-Dev/server-switcher/server-switcher.sh'
 
 # Prompt
 autoload -Uz compinit && compinit
