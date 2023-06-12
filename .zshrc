@@ -12,6 +12,8 @@ fi
 # Aliases
 alias la="ls -la"
 alias dotfiles='/opt/homebrew/bin/git --git-dir=/Users/marcantondahmen/.dotfiles/ --work-tree=/Users/marcantondahmen'
+alias dotls='dotfiles ls-tree --full-tree --name-only -r HEAD'
+alias dotst='dotfiles status'
 alias dev=fzfProjects
 
 # Prompt
