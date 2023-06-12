@@ -21,6 +21,10 @@ dotfiles push
 dotfiles log
 ```
 
+### Gitui
+
+It is also possible to use `gitui` in order to manage the repository using the `dot` alias.
+
 ## Setup
 
 > Note that these instructions assume that `git` was installes using `brew`.

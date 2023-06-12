@@ -11,6 +11,7 @@ fi
 
 # Aliases
 alias la="ls -la"
+alias dot='gitui --directory=/Users/marcantondahmen/.dotfiles/ --workdir=/Users/marcantondahmen'
 alias dotfiles='/opt/homebrew/bin/git --git-dir=/Users/marcantondahmen/.dotfiles/ --work-tree=/Users/marcantondahmen'
 alias dotls='dotfiles ls-tree --full-tree --name-only -r HEAD'
 alias dotst='dotfiles status'
