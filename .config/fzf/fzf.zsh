@@ -15,7 +15,7 @@ source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 # Custom functions
 fzfProjects() {
 	local projects=$(fd '\.git$' ~/MAD-Dev --exclude node_modules --hidden --no-ignore -t d -x dirname {} \; 2>/dev/null)
-	local items="$projects\n/Users/marcantondahmen/.config/nvim/"
+	local items="$projects\n$HOME/.config/nvim/"
 	local preview='(cd {1} && [ -f README.* ] && bat --color=always --style=numbers --theme=base16 README.* || ls -l)'
 	local selected=$(printf "$items" | fzf --no-multi --preview="$preview")
 

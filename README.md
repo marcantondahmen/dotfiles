@@ -1,7 +1,7 @@
 # Dotfiles
 
 This is the personal _dotfiles_ repository of Marc Anton Dahmen.
-It is supposed to be used as a bare repository inside of the home directoty in `~/.dotfiles`.
+It is supposed to be used as a bare repository inside of the home directory in `~/.dotfiles`.
 
 ## Usage
 
@@ -9,7 +9,7 @@ In order to be able to interact with the repository and add files from within th
 can be used instead of the regular `git` command. The `dotfiles` command essentially is an alias for:
 
 ```bash
-/opt/homebrew/bin/git --git-dir=/Users/marcantondahmen/.dotfiles/ --work-tree=/Users/marcantondahmen
+/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
 ```
 
 Therefore files can be added or updated using:
@@ -38,7 +38,7 @@ git clone --bare git@github.com:marcantondahmen/dotfiles.git $HOME/.dotfiles
 Then the alias has to be defined for the current session:
 
 ```bash
-alias dotfiles='/opt/homebrew/bin/git --git-dir=/Users/marcantondahmen/.dotfiles/ --work-tree=/Users/marcantondahmen'
+alias dotfiles='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
 And then finally the files can be checked out:
