@@ -11,12 +11,23 @@ fi
 
 # Aliases
 alias la="ls -la"
+
 alias dot='gitui --directory=/Users/marcantondahmen/.dotfiles/ --workdir=/Users/marcantondahmen'
 alias dotfiles='/opt/homebrew/bin/git --git-dir=/Users/marcantondahmen/.dotfiles/ --work-tree=/Users/marcantondahmen'
 alias dotls='dotfiles ls-tree --full-tree --name-only -r HEAD'
 alias dotst='dotfiles status'
+
 alias dev=fzfProjects
+alias f=fzfOpen
+
 alias www='sh ~/MAD-Dev/server-switcher/server-switcher.sh'
+
+alias tl='tmux ls'
+alias ta='tmux attach -t'
+alias td='tmux detach'
+alias tn='tmux new -s'
+alias tr='tmux rename-session'
+alias xx='exit'
 
 # Prompt
 autoload -Uz compinit && compinit
