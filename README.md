@@ -59,6 +59,8 @@ dotfiles config --local status.showUntrackedFiles no
 
 The following applications should be installed:
 
+- [tmux](https://github.com/tmux/tmux)
+- [starship](https://starship.rs)
 - [fzf](https://github.com/junegunn/fzf)
 - [fd](https://github.com/sharkdp/fd)
-- [starship](https://starship.rs)
+- [bat](https://github.com/sharkdp/bat)
