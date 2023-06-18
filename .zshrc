@@ -9,11 +9,13 @@ then
 	source ~/.private
 fi
 
+BREW=$(brew --prefix)
+
 # Aliases
 alias la="ls -la"
 
 alias dot='gitui --directory=$HOME/.dotfiles/ --workdir=$HOME'
-alias dotfiles='/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='$BREW/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotls='dotfiles ls-tree --full-tree --name-only -r HEAD'
 alias dotst='dotfiles status'
 
@@ -33,7 +35,7 @@ alias xx='exit'
 autoload -Uz compinit && compinit
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $BREW/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # fzf
 source ~/.config/fzf/fzf.zsh
