@@ -3,10 +3,10 @@
 export PATH="/usr/local/sbin:/usr/local/opt/python/libexec/bin:$PATH"
 export TERM="xterm-256color" CLICOLOR=1
 
-# Keep the SSH user and server in a separate file in order to exclude it from the repository.
-if [ -f ~/.mad_www ]
+# Keep things such as SSH users and servers in a separate file in order to exclude it from the repository.
+if [ -f ~/.private ]
 then
-	source ~/.mad_www
+	source ~/.private
 fi
 
 # Aliases
