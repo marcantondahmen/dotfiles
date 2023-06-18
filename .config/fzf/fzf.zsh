@@ -4,7 +4,7 @@ if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
 fi
 
 export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_DEFAULT_OPTS="--color=16 --cycle --preview-window=border-sharp"
+export FZF_DEFAULT_OPTS="--color=16 --cycle --preview-window=border-sharp --no-scrollbar"
 
 # Auto-completion
 [[ $- == *i* ]] && source "/opt/homebrew/opt/fzf/shell/completion.zsh" 2> /dev/null
