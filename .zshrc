@@ -22,7 +22,7 @@ alias f=fzfOpen
 
 alias www='sh ~/MAD-Dev/server-switcher/server-switcher.sh'
 
-alias tl='tmux ls'
+alias tl=fzfTmuxList
 alias ta='tmux attach -t'
 alias td='tmux detach'
 alias tn='tmux new -s'

@@ -46,3 +46,12 @@ fzfOpen() {
 	fi
 }
 
+fzfTmuxList() {
+	local session=$(tmux ls | fzf --height 30% --layout=reverse | awk -F: '{print $1}')
+
+	if [ ! -z $session ]
+	then
+		tmux attach -t "$session"
+	fi
+}
+
