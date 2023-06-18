@@ -1,9 +1,14 @@
 add_newline = true
-format = """$directory$git_branch$git_metrics$git_status$fill$time$line_break$character"""
+format = '$hostname$directory$git_branch$git_metrics$git_status $fill $time$line_break$character'
+
+[hostname]
+ssh_only = true
+ssh_symbol = ''
+format = '[ $hostname](fg:4) '
 
 [directory]
 truncation_length = 6
-truncation_symbol = "…/"
+truncation_symbol = '…/'
 truncate_to_repo = false
 
 [time]
@@ -15,10 +20,10 @@ time_format = '%F %T'
 disabled = false
 
 [git_branch]
-symbol = " "
+symbol = ' '
 
-[package]
-disabled = true
+[git_status]
+deleted = ''
 
 [fill]
-symbol = " "
+symbol = ' '
