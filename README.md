@@ -72,9 +72,8 @@ the following script has to be added to the `~/.ssh/rc` file:
 
 ```bash
 #!/bin/sh
-
 if test "$SSH_AUTH_SOCK" ; then
-	ln -sf $SSH_AUTH_SOCK /tmp/ssh_auth_sock_tmux
+    ln -sf $SSH_AUTH_SOCK /tmp/ssh_auth_sock_tmux
 fi
 ```
 
