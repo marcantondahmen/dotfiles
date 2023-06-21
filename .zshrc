@@ -39,3 +39,14 @@ source $BREW/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # fzf
 source ~/.config/fzf/fzf.zsh
+
+# Fix SSH agent forwarding in tmux
+updateTmuxEnv() {
+  if [ -n "$TMUX" ]; then
+    eval $(tmux showenv -s | grep -E '^(SSH|DISPLAY)')
+  fi
+}
+
+preexec() {
+    updateTmuxEnv
+}
