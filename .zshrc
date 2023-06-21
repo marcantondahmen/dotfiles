@@ -12,7 +12,8 @@ fi
 BREW=$(brew --prefix)
 
 # Aliases
-alias la="ls -la"
+alias la='ls -la'
+alias cat='bat'
 
 alias dot='gitui --directory=$HOME/.dotfiles/ --workdir=$HOME'
 alias dotfiles='$BREW/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

@@ -18,7 +18,7 @@ source "$BREW/opt/fzf/shell/key-bindings.zsh"
 fzfProjects() {
 	local projects=$(fd '\.git$' ~/MAD-Dev --exclude node_modules --hidden --no-ignore -t d -x dirname {} \; 2>/dev/null)
 	local items="$projects\n$HOME/.config/nvim/"
-	local preview='(cd {1} && [ -f README.* ] && bat --color=always --style=numbers --theme=base16 README.* || ls -l)'
+	local preview='(cd {1} && [ -f README.* ] && bat --color=always --style=numbers README.* || ls -l)'
 	local selected=$(printf "$items" | fzf --no-multi --preview="$preview")
 
 	if [ ! -z "$selected" ]
@@ -29,7 +29,7 @@ fzfProjects() {
 }
 
 fzfOpen() {
-	local filePreview='if file -b --mime-type {} | grep -qiE "text|json"; then bat --color=always --style=numbers --theme=base16 {}; else echo "Binary file"; fi'
+	local filePreview='if file -b --mime-type {} | grep -qiE "text|json"; then bat --color=always --style=numbers {}; else echo "Binary file"; fi'
 	local dirPreview='echo "Directory contents:" && ls -lA --color=always {} | awk '"'"'{print $9}'"'"''
 	local selected=$(fd -H -I -E node_modules -E cache -E .git . $(pwd) | \
 		fzf \
