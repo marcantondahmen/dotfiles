@@ -44,7 +44,7 @@ source ~/.config/fzf/fzf.zsh
 # Fix SSH agent forwarding in tmux
 updateTmuxEnv() {
   if [ -n "$TMUX" ]; then
-    eval $(tmux showenv -s | grep -E '^(SSH|DISPLAY)')
+    eval $(tmux showenv -s)
   fi
 }
 
