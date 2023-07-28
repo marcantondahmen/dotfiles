@@ -1,7 +1,6 @@
 # The personal zsh config file of Marc Anton Dahmen
 
 export PATH="/usr/local/sbin:/usr/local/opt/python/libexec/bin:$PATH"
-export TERM="xterm-256color" CLICOLOR=1
 
 # Keep things such as SSH users and servers in a separate file in order to exclude it from the repository.
 if [ -f ~/.private ]
