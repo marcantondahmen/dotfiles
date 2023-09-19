@@ -31,6 +31,12 @@ alias tn='tmux new -s'
 alias tr='tmux rename-session'
 alias xx='exit'
 
+alias gl="git log \
+	--graph --decorate --branches --color \
+	--pretty=format:'%>|(18)%C(blue)%h   %C(auto)%d %Creset%s %C(dim)- %cr, %ce%Creset' | \
+	sed 's/*//g' | sed 's/|/│/g' | sed 's|/|╱|g' | sed 's|\\\\|╲|g' | \
+	less -RC"
+
 # Prompt
 autoload -Uz compinit && compinit
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
