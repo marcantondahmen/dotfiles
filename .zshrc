@@ -11,6 +11,7 @@ fi
 BREW=$(brew --prefix)
 
 # Aliases
+alias ls="ls --color=always"
 alias la='ls -la'
 alias cat='bat'
 
@@ -33,8 +34,7 @@ alias xx='exit'
 
 alias gl="git log \
 	--graph --decorate --branches --color \
-	--pretty=format:'%>|(18)%C(blue)%h%C(auto)%d %Creset%s %C(#1abc9c)%cr %C(#545c7e)%ce%Creset' | \
-	sed 's/*//g' | \
+	--pretty=format:'%>|(18)%C(blue)%h   %C(auto)%d %Creset%s %C(brightblack)- %cr, %ce%Creset' | \
 	less -RC"
 
 # Prompt
