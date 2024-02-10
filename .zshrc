@@ -23,7 +23,7 @@ alias dotst='dotfiles status'
 alias dev=fzfProjects
 alias f=fzfOpen
 
-alias www='sh ~/MAD-Dev/server-switcher/server-switcher.sh'
+alias srv='sh ~/MAD-Dev/server-switcher/server-switcher.sh'
 
 alias tl=fzfTmuxList
 alias ta='tmux attach -t'
