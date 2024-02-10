@@ -5,7 +5,8 @@ format = '$hostname$directory$git_branch$fill$time$line_break$character'
 
 [hostname]
 ssh_only = false
-format = '[$hostname](fg:8) '
+ssh_symbol = ' '
+format = '[$ssh_symbol](fg:1)[$hostname](fg:8) '
 trim_at = '.'
 disabled = false
 
