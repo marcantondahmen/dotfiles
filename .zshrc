@@ -43,6 +43,13 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 source $BREW/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Filter json with jq
+# use like:
+# jf file.json regex
+jf() {
+	cat $1 | jq "with_entries( select(.key | test(\"$2\"; \"i\")) )"
+}
+
 # fzf
 source ~/.config/fzf/fzf.zsh
 
