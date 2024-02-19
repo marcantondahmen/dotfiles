@@ -35,7 +35,7 @@ alias xx='exit'
 
 alias gl="git log \
 	--graph --decorate --branches --color \
-	--pretty=format:'%>|(18)%C(blue)%h   %C(auto)%d %Creset%s %C(brightblack)- %cr, %ce%Creset' | \
+	--pretty=format:'%>|(18)%C(blue)%h   %C(auto)%d %Creset%s %C(#1abc9c)%cr %C(#545c7e)%ce%Creset' | \
 	less -RC"
 
 # Prompt
