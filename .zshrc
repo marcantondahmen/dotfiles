@@ -21,7 +21,8 @@ alias dotls='dotfiles ls-tree --full-tree --name-only -r HEAD'
 alias dotst='dotfiles status'
 
 alias dev=fzfProjects
-alias f=fzfOpen
+alias f=fzfFindDir
+alias ff=fzfFindFile
 
 alias srv='sh ~/MAD-Dev/server-switcher/server-switcher.sh'
 

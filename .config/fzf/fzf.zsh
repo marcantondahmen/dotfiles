@@ -28,23 +28,29 @@ fzfProjects() {
 	fi
 }
 
-fzfOpen() {
-	local filePreview='if file -b --mime-type {} | grep -qiE "text|json"; then bat --color=always --style=numbers {}; else echo "Binary file"; fi'
+fzfFindDir() {
 	local dirPreview='echo "Directory contents:" && ls -lA --color=always {} | awk '"'"'{print $9}'"'"''
-	local selected=$(fd -H -I -E node_modules -E cache -E .git . $(pwd) | \
+	local selected=$(fd --type directory -H -I -E node_modules -E cache -E .git . $(pwd) | \
 		fzf \
 		--no-multi \
-		--preview="if [ -f {} ]; then $filePreview; else $dirPreview; fi" \
-	)
+		--preview="$dirPreview")
 
 	if [ ! -z $selected ]
 	then
-		if [ -f "$selected" ]
-		then
-			cd $(dirname "$selected") && nvim "$selected"
-		else
-			cd "$selected" 
-		fi
+		cd "$selected"
+	fi
+}
+
+fzfFindFile() {
+	local filePreview='if file -b --mime-type {} | grep -qiE "text|json"; then bat --color=always --style=numbers {}; else echo "Binary file"; fi'
+	local selected=$(fd --type file -H -I -E node_modules -E cache -E .git . $(pwd) | \
+		fzf \
+		--no-multi \
+		--preview="$filePreview")
+
+	if [ ! -z $selected ]
+	then
+		cd $(dirname "$selected") && nvim "$selected"
 	fi
 }
 
