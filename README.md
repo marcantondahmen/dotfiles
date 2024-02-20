@@ -64,3 +64,4 @@ The following applications should be installed:
 - [fzf](https://github.com/junegunn/fzf)
 - [fd](https://github.com/sharkdp/fd)
 - [bat](https://github.com/sharkdp/bat)
+- [tig](https://jonas.github.io/tig/)
