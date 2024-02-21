@@ -4,6 +4,8 @@ local config = wezterm.config_builder()
 
 config.term = "xterm-256color"
 
+config.front_end = "WebGpu"
+
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
@@ -22,8 +24,6 @@ config.window_padding = {
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 16
 config.bold_brightens_ansi_colors = true
-config.freetype_load_target = "Light"
-config.freetype_render_target = "Light"
 
 config.default_cursor_style = "SteadyBlock"
 
