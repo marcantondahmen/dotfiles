@@ -16,10 +16,10 @@ config.initial_rows = 40
 config.initial_cols = 120
 
 config.window_padding = {
-	left = 8,
-	right = 8,
-	top = 4,
-	bottom = 4,
+	left = 6,
+	right = 6,
+	top = 6,
+	bottom = 6,
 }
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
