@@ -59,6 +59,7 @@ dotfiles config --local status.showUntrackedFiles no
 
 The following applications should be installed:
 
+- [wezterm](https://wezfurlong.org/wezterm/index.html)
 - [tmux](https://github.com/tmux/tmux)
 - [starship](https://starship.rs)
 - [fzf](https://github.com/junegunn/fzf)
