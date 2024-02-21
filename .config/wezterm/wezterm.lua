@@ -30,6 +30,8 @@ config.default_cursor_style = "SteadyBlock"
 
 config.color_scheme = "Tokyo Night Storm"
 
+local winMaximizedStates = {}
+
 config.keys = {
 	{
 		key = "v",
@@ -44,7 +46,17 @@ config.keys = {
 	{
 		key = "\r",
 		mods = "CMD",
-		action = wezterm.action.ToggleFullScreen,
+		action = wezterm.action_callback(function(win, pane)
+			-- Toggle size of active window to be maximized (not fullscreen)
+			-- or restored to the initial size.
+			if winMaximizedStates[win.window_id] then
+				win:restore()
+				winMaximizedStates[win.window_id] = false
+			else
+				win:maximize()
+				winMaximizedStates[win.window_id] = true
+			end
+		end),
 	},
 }
 
