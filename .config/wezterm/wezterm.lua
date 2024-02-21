@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
 
 config.term = "xterm-256color"
 
+-- This must be set to WebGpu in order to fix color issues.
 config.front_end = "WebGpu"
 
 config.window_decorations = "RESIZE"
