@@ -15,6 +15,10 @@ config.hide_tab_bar_if_only_one_tab = true
 config.initial_rows = 40
 config.initial_cols = 120
 
+-- Use ALT in order to make links clickable inside of a tmux session.
+-- Defaults to SHIFT.
+config.bypass_mouse_reporting_modifiers = "ALT"
+
 config.window_padding = {
 	left = 6,
 	right = 6,
