@@ -23,11 +23,13 @@ config.initial_cols = 120
 -- Defaults to SHIFT.
 config.bypass_mouse_reporting_modifiers = "ALT"
 
+-- Use pt as unit in order to get the same visual result on an external display
+-- and the internal retina display of a MacBook.
 config.window_padding = {
-	left = 6,
-	right = 6,
-	top = 6,
-	bottom = 6,
+	left = "9pt",
+	right = "9pt",
+	top = "4pt",
+	bottom = "4pt",
 }
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
