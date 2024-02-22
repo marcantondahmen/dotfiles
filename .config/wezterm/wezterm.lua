@@ -4,7 +4,11 @@ local config = wezterm.config_builder()
 
 config.term = "xterm-256color"
 
--- This must be set to WebGpu in order to fix color issues.
+-- Depending on the front_end, colors may look more saturated.
+-- In order to achieve the same result like using iTerm, the front_end
+-- should be "WebGpu". Setting the front_end to "OpenGL" will result
+-- in slightly over-saturated colors.
+-- See https://wezfurlong.org/wezterm/config/lua/config/front_end.html
 config.front_end = "WebGpu"
 
 config.window_decorations = "RESIZE"
