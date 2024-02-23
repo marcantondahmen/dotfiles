@@ -1,6 +1,6 @@
 # The personal zsh config file of Marc Anton Dahmen
 
-export PATH="/usr/local/sbin:/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/opt/homebrew/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:$PATH"
 
 # Keep things such as SSH users and servers in a separate file in order to exclude it from the repository.
 if [ -f ~/.private ]
