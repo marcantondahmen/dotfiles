@@ -32,6 +32,16 @@ config.window_padding = {
 	bottom = "4pt",
 }
 
+-- Add both possible locations (Intel and Apple Silicon)
+-- for fonts that have been installed with brew.
+-- These directories should be preferred over the user fonts directory
+-- since there outdate fonts could be mixed in one family
+-- (for example after renames in nerd fonts).
+config.font_dirs = {
+	"/opt/homebrew/Caskroom",
+	"/usr/local/Caskroom",
+}
+
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 16
 config.bold_brightens_ansi_colors = true
