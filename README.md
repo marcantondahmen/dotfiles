@@ -66,3 +66,5 @@ The following applications should be installed:
 - [fd](https://github.com/sharkdp/fd)
 - [bat](https://github.com/sharkdp/bat)
 - [tig](https://jonas.github.io/tig/)
+- [gsed](https://formulae.brew.sh/formula/gnu-sed) (as replacement for the sed that is shipped with macOS)
+- [bash](https://formulae.brew.sh/formula/bash) (newer version of bash than the one shipped with macOS)
