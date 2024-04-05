@@ -5,6 +5,8 @@ set main-options = --all
 set main-view-date = custom
 set main-view-date-format = "%a %F %H:%M"
 
+set commit-order = date
+
 color "---"                         blue    default
 color "diff --"                     yellow  default
 color "--- "                        yellow  default
