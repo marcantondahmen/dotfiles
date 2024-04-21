@@ -26,6 +26,8 @@ alias ff=fzfFindFile
 
 alias srv='sh ~/MAD-Dev/server-switcher/server-switcher.sh'
 
+alias ld='lazydocker'
+
 alias tl=fzfTmuxList
 alias ta='tmux attach -t'
 alias td='tmux detach'
