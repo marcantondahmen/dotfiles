@@ -1,6 +1,6 @@
-# Dotfiles
+# Marc's macOS Dotfiles
 
-This is the personal _dotfiles_ repository of Marc Anton Dahmen.
+This repository contains all _dotfiles_ that I, [Marc Anton Dahmen](https://marcdahmen.de), use on my private macOS machines.
 It is supposed to be used as a bare repository inside of the home directory in `~/.dotfiles`.
 
 ## Usage
@@ -9,7 +9,7 @@ In order to be able to interact with the repository and add files from within th
 can be used instead of the regular `git` command. The `dotfiles` command essentially is an alias for:
 
 ```bash
-/opt/homebrew/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
+$BREW/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
 ```
 
 Therefore files can be added or updated using:
@@ -59,6 +59,7 @@ dotfiles config --local status.showUntrackedFiles no
 
 The following applications should be installed:
 
+- [aerospace](https://github.com/nikitabobko/AeroSpace)
 - [wezterm](https://wezfurlong.org/wezterm/index.html)
 - [tmux](https://github.com/tmux/tmux)
 - [starship](https://starship.rs)
@@ -68,3 +69,7 @@ The following applications should be installed:
 - [tig](https://jonas.github.io/tig/)
 - [gsed](https://formulae.brew.sh/formula/gnu-sed) (as replacement for the sed that is shipped with macOS)
 - [bash](https://formulae.brew.sh/formula/bash) (newer version of bash than the one shipped with macOS)
+
+---
+
+&copy; 2024 Marc Anton Dahmen, MIT license
