@@ -59,7 +59,12 @@ outer.right =      12
 [mode.main.binding]
 
 cmd-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
-cmd-b = 'exec-and-forget open -n /Applications/Safari.app'
+cmd-b = '''exec-and-forget osascript -e '
+tell application "Safari"
+    make new document at end of documents
+    activate
+end tell'
+'''
 
 # All possible keys:
 # - Letters.        a, b, c, ..., z
