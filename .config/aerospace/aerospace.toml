@@ -91,6 +91,8 @@ cmd-comma = 'layout accordion horizontal vertical'
 
 cmd-f = 'fullscreen'
 
+# Note that cmd-s and cmd-w are already used by macOS and tmux!
+# Therefore those can only be used in combination with shift.
 cmd-shift-s = 'layout v_accordion' # 'layout stacking' in i3
 cmd-shift-w = 'layout h_accordion' # 'layout tabbed' in i3
 cmd-shift-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
