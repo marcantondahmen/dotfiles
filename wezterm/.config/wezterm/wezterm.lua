@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
+local isLinux = wezterm.target_triple:find("linux") ~= nil
 
 config.term = "xterm-256color"
 
@@ -19,66 +20,95 @@ config.hide_tab_bar_if_only_one_tab = true
 config.initial_rows = 40
 config.initial_cols = 120
 
--- Use ALT in order to make links clickable inside of a tmux session.
--- Defaults to SHIFT.
-config.bypass_mouse_reporting_modifiers = "ALT"
-
--- Use pt as unit in order to get the same visual result on an external display
--- and the internal retina display of a MacBook.
-config.window_padding = {
-	left = "9pt",
-	right = "9pt",
-	top = "4pt",
-	bottom = "4pt",
-}
-
--- Add both possible locations (Intel and Apple Silicon)
--- for fonts that have been installed with brew.
--- These directories should be preferred over the user fonts directory
--- since there outdate fonts could be mixed in one family
--- (for example after renames in nerd fonts).
-config.font_dirs = {
-	"/opt/homebrew/Caskroom",
-	"/usr/local/Caskroom",
-}
-
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 16
 config.bold_brightens_ansi_colors = true
 
 config.default_cursor_style = "SteadyBlock"
 
 config.color_scheme = "Tokyo Night Storm"
 
+-- Use ALT in order to make links clickable inside of a tmux session.
+-- Defaults to SHIFT.
+config.bypass_mouse_reporting_modifiers = "ALT"
+
 local winMaximizedStates = {}
 
-config.keys = {
-	{
-		key = "v",
-		mods = "CMD",
-		action = wezterm.action.PasteFrom("Clipboard"),
-	},
-	{
-		key = "w",
-		mods = "CMD",
-		action = wezterm.action.CloseCurrentTab({ confirm = false }),
-	},
-	{
-		key = "\r",
-		mods = "CMD",
-		action = wezterm.action_callback(function(win, pane)
-			-- Toggle size of active window to be maximized (not fullscreen)
-			-- or restored to the initial size.
-			if winMaximizedStates[win.window_id] then
-				win:restore()
-				winMaximizedStates[win.window_id] = false
-			else
-				win:maximize()
-				winMaximizedStates[win.window_id] = true
-			end
-		end),
-	},
-}
+if isLinux then
+	-- Linux
+
+	config.window_padding = {
+		left = "4pt",
+		right = "4pt",
+		top = "4pt",
+		bottom = "4pt",
+	}
+
+	config.font_size = 12
+
+	config.keys = {
+		{
+			key = "v",
+			mods = "CTRL",
+			action = wezterm.action.PasteFrom("Clipboard"),
+		},
+		{
+			key = "w",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action.CloseCurrentTab({ confirm = false }),
+		},
+	}
+else
+	-- macOS
+
+	-- Use pt as unit in order to get the same visual result on an external display
+	-- and the internal retina display of a MacBook.
+	config.window_padding = {
+		left = "9pt",
+		right = "9pt",
+		top = "4pt",
+		bottom = "4pt",
+	}
+
+	-- Add both possible locations (Intel and Apple Silicon)
+	-- for fonts that have been installed with brew.
+	-- These directories should be preferred over the user fonts directory
+	-- since there outdate fonts could be mixed in one family
+	-- (for example after renames in nerd fonts).
+	config.font_dirs = {
+		"/opt/homebrew/Caskroom",
+		"/usr/local/Caskroom",
+	}
+
+	config.font_size = 16
+
+	config.keys = {
+		{
+			key = "v",
+			mods = "CMD",
+			action = wezterm.action.PasteFrom("Clipboard"),
+		},
+		{
+			key = "w",
+			mods = "CMD",
+			action = wezterm.action.CloseCurrentTab({ confirm = false }),
+		},
+		{
+			key = "\r",
+			mods = "CMD",
+			action = wezterm.action_callback(function(win, pane)
+				-- Toggle size of active window to be maximized (not fullscreen)
+				-- or restored to the initial size.
+				if winMaximizedStates[win.window_id] then
+					win:restore()
+					winMaximizedStates[win.window_id] = false
+				else
+					win:maximize()
+					winMaximizedStates[win.window_id] = true
+				end
+			end),
+		},
+	}
+end
 
 -- A fix for broken links in Markdown link.
 -- see https://github.com/wez/wezterm/issues/3803#issuecomment-1608954312
