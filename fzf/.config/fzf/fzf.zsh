@@ -20,7 +20,7 @@ export FZF_DEFAULT_OPTS="--color=16 --cycle --preview-window=border-sharp --no-s
 fzfProjects() {
 	local madDev=$(fd '\.git$' ~/MAD-Dev --exclude node_modules --hidden --no-ignore -t d -x dirname {} \; 2>/dev/null)
 	local dev=$(fd '\.git$' ~/dev --exclude node_modules --hidden --no-ignore -t d -x dirname {} \; 2>/dev/null)
-	local items="$projects\n$dev\n$HOME/.config/nvim/"
+	local items="$projects\n$dev\n$HOME/dotfiles\n$HOME/.config/nvim"
 	local preview='(cd {1} && [ -f README.* ] && bat --color=always --style=numbers README.* || ls -l)'
 	local selected=$(printf "$items" | fzf --no-multi --preview="$preview")
 
