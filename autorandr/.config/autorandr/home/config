@@ -1,0 +1,29 @@
+output DP-1
+off
+output HDMI-1
+off
+output DP-3
+off
+output eDP-1
+crtc 1
+filter bilinear
+mode 2256x1504
+pos 0x0
+rate 60.00
+transform 0.674988,0.000000,0.000000,0.000000,0.674988,0.000000,0.000000,0.000000,1.000000
+x-prop-broadcast_rgb Automatic
+x-prop-colorspace Default
+x-prop-max_bpc 12
+x-prop-non_desktop 0
+x-prop-scaling_mode Full aspect
+output DP-2
+crtc 0
+mode 2560x1440
+pos 2256x0
+primary
+rate 59.95
+x-prop-audio auto
+x-prop-broadcast_rgb Automatic
+x-prop-colorspace Default
+x-prop-max_bpc 12
+x-prop-non_desktop 0

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sleep 3
+i3-msg '[class=".*"]' move workspace to output primary
+killall polybar
+bash ~/.config/polybar/launch.sh
+notify-send -i display "Display profile" "$AUTORANDR_CURRENT_PROFILE"

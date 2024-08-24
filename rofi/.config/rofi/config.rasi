@@ -1,0 +1,19 @@
+configuration {
+	modi: "combi";
+	combi-modes: "window,run";
+	window-format: "{w}  {c}  {t}";
+	combi-display-format: "{mode} {text}";
+	case-sensitive: false;
+	show-icons: false;
+	terminal: "wezterm";
+	drun-display-format: "{icon} {name}";
+	location: 2;
+	fixed-num-lines: false;
+	window-thumbnail: true;
+	disable-history: false;
+	hide-scrollbar: false;
+	sidebar-mode: false;
+	combi-hide-mode-prefix: false;
+}
+
+@theme "tokyonight"

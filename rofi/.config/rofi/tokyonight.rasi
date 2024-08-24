@@ -1,0 +1,98 @@
+* {
+    bg-col:  #24283b;
+    bg-col-light: #292e42;
+    border-col: #3b4261;
+    selected-col: #24283b;
+    blue: #7aa2f7;
+    fg-col: #a9b1d6;
+    fg-col2: #7aa2f7;
+    grey: #545c7e;
+    width: 500;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+	margin: 85px 0 0 0;
+    background-color: @bg-col-light;
+	border: 2px;
+	border-color: @border-col;
+}
+
+mainbox {
+    background-color: @bg-col-light;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+}
+
+prompt {
+	enabled: false;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 15px 18px;
+    margin: 0px;
+    text-color: @fg-col;
+    background-color: inherit;
+}
+
+listview {
+    border: 0px 0px 0px 0px;
+    padding: 0px;
+    margin: 10px 0;
+    columns: 1;
+    lines: 10;
+    background-color: @bg-col-light;
+}
+
+element {
+    padding: 6px 18px;
+    background-color: inherit;
+    text-color: @fg-col  ;
+}
+
+element-icon {
+    size: 25px;
+	margin: 0 10px 0 0;
+}
+
+element selected {
+    background-color:  @selected-col ;
+    text-color: @fg-col2  ;
+}
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+}
+
+button selected {
+}
+
+message {
+    background-color: @bg-col-light;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @blue;
+    background-color: @bg-col-light;
+}
