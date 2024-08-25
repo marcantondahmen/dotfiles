@@ -11,7 +11,10 @@
 
 # see https://github.com/typecraft-dev/dotfiles/blob/master/i3/.config/i3/config
 
-set $mod Mod4
+# Layout modifier
+set $mod Mod1
+# Application modifier
+set $super Mod4
 
 set $bg 			#1f2335
 set $bgTitle		#292e42
@@ -49,10 +52,10 @@ font pango:JetBrainsMono Nerd Font Mono 12
 exec --no-startup-id dex --autostart --environment i3
 
 # Show power menu
-bindsym $mod+Shift+e exec bash ~/.config/rofi/power.sh
+bindsym $super+e exec bash ~/.config/rofi/power.sh
 
 # Lock the screen manually
-bindsym $mod+Shift+l exec bash ~/.config/i3/lock.sh
+bindsym $super+l exec bash ~/.config/i3/lock.sh
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -71,10 +74,10 @@ exec --no-startup-id bash ~/.config/i3/tap-to-click.sh
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Screenshot
+# Screenshot key bindings like in macOS
 exec --no-startup-id mkdir -p ~/screenshots
-bindsym $mod+Shift+p exec maim -u --select | xclip -selection clipboard -t image/png
-bindsym $mod+p exec maim -u --select "/home/$USER/screenshots/$(date '+%Y-%m-%d_%H:%M:%S').png"
+bindsym $super+Shift+4 exec maim -u --select "/home/$USER/screenshots/$(date '+%Y-%m-%d_%H:%M:%S').png"
+bindsym $super+Shift+Control+4 exec maim -u --select | xclip -selection clipboard -t image/png
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -99,24 +102,24 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec wezterm
+bindsym $super+Return exec wezterm
 
 # start Chrome
-bindsym $mod+b exec google-chrome-stable
+bindsym $super+b exec google-chrome-stable
 
 # start Yazi
-bindsym $mod+y exec wezterm start -- yazi
+bindsym $super+y exec wezterm start -- yazi
 # make sure that key also works when changing layout
-bindsym $mod+z exec wezterm start -- yazi
+bindsym $super+z exec wezterm start -- yazi
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $super+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-bindsym $mod+space exec "rofi -show combi"
+bindsym $super+space exec "rofi -show combi"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -124,7 +127,7 @@ bindsym $mod+space exec "rofi -show combi"
 # Move back and forth between two workspaces
 bindsym $mod+Tab workspace back_and_forth
 # Move to the next workspace
-bindsym Mod1+Tab workspace next
+bindsym $super+Tab workspace next
 
 # change focus
 bindsym $mod+Left focus left
@@ -148,9 +151,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+slash layout toggle split
+bindsym $mod+Shift+slash layout toggle tabbed stacking
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -222,32 +224,11 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
-	# These bindings trigger as soon as you enter the resize mode
-
-	# Pressing left will shrink the window’s width.
-	# Pressing right will grow the window’s width.
-	# Pressing up will shrink the window’s height.
-	# Pressing down will grow the window’s height.
-	bindsym j resize shrink width 10 px or 10 ppt
-	bindsym k resize grow height 10 px or 10 ppt
-	bindsym l resize shrink height 10 px or 10 ppt
-	bindsym semicolon resize grow width 10 px or 10 ppt
-
-	# same bindings, but for the arrow keys
-	bindsym Left resize shrink width 10 px or 10 ppt
-	bindsym Down resize grow height 10 px or 10 ppt
-	bindsym Up resize shrink height 10 px or 10 ppt
-	bindsym Right resize grow width 10 px or 10 ppt
-
-	# back to normal: Enter or Escape or $mod+r
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-	bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
+# Resize windows
+bindsym $mod+plus resize grow width 10 px or 10 ppt
+bindsym $mod+minus resize shrink width 10 px or 10 ppt
+bindsym $mod+Shift+plus resize grow height 10 px or 10 ppt
+bindsym $mod+Shift+minus resize shrink height 10 px or 10 ppt
 
 gaps inner 8
 gaps outer 0
