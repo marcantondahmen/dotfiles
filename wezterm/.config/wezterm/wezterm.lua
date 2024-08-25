@@ -63,10 +63,10 @@ else
 	-- Use pt as unit in order to get the same visual result on an external display
 	-- and the internal retina display of a MacBook.
 	config.window_padding = {
-		left = '9pt',
-		right = '9pt',
-		top = '4pt',
-		bottom = '4pt',
+		left = '7pt',
+		right = '7pt',
+		top = '7pt',
+		bottom = '7pt',
 	}
 
 	-- Add both possible locations (Intel and Apple Silicon)
