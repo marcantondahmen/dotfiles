@@ -92,20 +92,11 @@ else
 			mods = 'CMD',
 			action = wezterm.action.CloseCurrentTab({ confirm = false }),
 		},
+		-- Disable fullscreen since it is conflicting with AeroSpace.
 		{
 			key = '\r',
-			mods = 'CMD',
-			action = wezterm.action_callback(function(win, pane)
-				-- Toggle size of active window to be maximized (not fullscreen)
-				-- or restored to the initial size.
-				if winMaximizedStates[win.window_id] then
-					win:restore()
-					winMaximizedStates[win.window_id] = false
-				else
-					win:maximize()
-					winMaximizedStates[win.window_id] = true
-				end
-			end),
+			mods = 'ALT',
+			action = wezterm.action_callback(function(win, pane) end),
 		},
 	}
 end
