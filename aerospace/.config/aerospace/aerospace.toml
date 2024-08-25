@@ -61,6 +61,8 @@ outer.right =      12
 # Use cmd modifier for starting programs
 cmd-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
 
+cmd-y = 'exec-and-forget wezterm start -- yazi'
+
 cmd-b = '''exec-and-forget osascript -e '
 tell application "Safari"
     make new document at end of documents
