@@ -58,7 +58,6 @@ outer.right =      10
 # 'main' binding mode must be always presented
 [mode.main.binding]
 
-# Use cmd modifier for starting programs
 cmd-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
 
 cmd-y = 'exec-and-forget wezterm start -- yazi ~'
@@ -89,8 +88,6 @@ end tell'
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # alt-enter = 'exec-and-forget open -n /System/Applications/Utilities/Terminal.app'
 
-# Use alt modifier for layout
-
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
 alt-shift-slash = 'layout accordion horizontal vertical'
@@ -103,16 +100,16 @@ alt-h = 'split horizontal'
 alt-v = 'split vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-left = 'focus left'
-alt-down = 'focus down'
-alt-up = 'focus up'
-alt-right = 'focus right'
+cmd-left = 'focus left'
+cmd-down = 'focus down'
+cmd-up = 'focus up'
+cmd-right = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-alt-shift-left = 'move left'
-alt-shift-down = 'move down'
-alt-shift-up = 'move up'
-alt-shift-right = 'move right'
+cmd-shift-left = 'move left'
+cmd-shift-down = 'move down'
+cmd-shift-up = 'move up'
+cmd-shift-right = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 alt-shift-minus = 'resize smart -50'
