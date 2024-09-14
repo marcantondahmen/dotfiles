@@ -60,7 +60,7 @@ outer.right =      10
 
 cmd-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
 
-cmd-y = 'exec-and-forget wezterm start -- yazi ~'
+cmd-y = 'exec-and-forget open -n /Applications/WezTerm.app --args start -- yazi ~'
 
 cmd-b = '''exec-and-forget osascript -e '
 tell application "Safari"
