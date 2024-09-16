@@ -133,6 +133,10 @@ bindsym $super+Shift+Down move down
 bindsym $super+Shift+Up move up
 bindsym $super+Shift+Right move right
 
+# move focused workspace between monitors
+bindsym $super+Shift+greater move workspace to output right
+bindsym $super+Shift+less move workspace to output left
+
 # split in horizontal orientation
 bindsym $alt+h split h
 
@@ -166,32 +170,28 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $alt+1 workspace number $ws1
-bindsym $alt+2 workspace number $ws2
-bindsym $alt+3 workspace number $ws3
-bindsym $alt+4 workspace number $ws4
-bindsym $alt+5 workspace number $ws5
-bindsym $alt+6 workspace number $ws6
-bindsym $alt+7 workspace number $ws7
-bindsym $alt+8 workspace number $ws8
-bindsym $alt+9 workspace number $ws9
-bindsym $alt+0 workspace number $ws10
+bindsym $super+1 workspace number $ws1
+bindsym $super+2 workspace number $ws2
+bindsym $super+3 workspace number $ws3
+bindsym $super+4 workspace number $ws4
+bindsym $super+5 workspace number $ws5
+bindsym $super+6 workspace number $ws6
+bindsym $super+7 workspace number $ws7
+bindsym $super+8 workspace number $ws8
+bindsym $super+9 workspace number $ws9
+bindsym $super+0 workspace number $ws10
 
 # move focused container to workspace
-bindsym $alt+Shift+1 move container to workspace number $ws1
-bindsym $alt+Shift+2 move container to workspace number $ws2
-bindsym $alt+Shift+3 move container to workspace number $ws3
-bindsym $alt+Shift+4 move container to workspace number $ws4
-bindsym $alt+Shift+5 move container to workspace number $ws5
-bindsym $alt+Shift+6 move container to workspace number $ws6
-bindsym $alt+Shift+7 move container to workspace number $ws7
-bindsym $alt+Shift+8 move container to workspace number $ws8
-bindsym $alt+Shift+9 move container to workspace number $ws9
-bindsym $alt+Shift+0 move container to workspace number $ws10
-
-# move focused workspace between monitors
-bindsym $alt+Shift+greater move workspace to output right
-bindsym $alt+Shift+less move workspace to output left
+bindsym $super+$alt+1 move container to workspace number $ws1
+bindsym $super+$alt+2 move container to workspace number $ws2
+bindsym $super+$alt+3 move container to workspace number $ws3
+bindsym $super+$alt+4 move container to workspace number $ws4
+bindsym $super+$alt+5 move container to workspace number $ws5
+bindsym $super+$alt+6 move container to workspace number $ws6
+bindsym $super+$alt+7 move container to workspace number $ws7
+bindsym $super+$alt+8 move container to workspace number $ws8
+bindsym $super+$alt+9 move container to workspace number $ws9
+bindsym $super+$alt+0 move container to workspace number $ws10
 
 # Initially assign all workspaces to the primary output
 workspace $ws1 output primary
