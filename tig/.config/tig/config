@@ -6,6 +6,7 @@ set main-view-date = custom
 set main-view-date-format = "%a %F %H:%M"
 
 set commit-order = date
+set tab-size = 4
 
 color "---"                         blue    default
 color "diff --"                     yellow  default
