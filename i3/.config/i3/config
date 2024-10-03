@@ -15,7 +15,7 @@ set $alt Mod1
 set $super Mod4
 
 set $bg 			#1f2335
-set $bgTitle		#292e42
+set $bgTitle		#24283b
 set $bgTitleFocused	#3b4261
 set $border			#292e42
 set $borderFocused	#3b4261
@@ -218,7 +218,12 @@ bindsym $alt+Shift+minus resize shrink height 10 px or 10 ppt
 
 gaps inner 8
 gaps outer 0
+gaps top -6
 
+# This border has to be set even though picom has borders,
+# since the custom picom shader draws borders on top of the windows
+# and that would cover part of the window.
+# The border here is used to compensate that space.
 default_border pixel 2
 
 # target                 title     	       bg    			text 			indicator   	border
