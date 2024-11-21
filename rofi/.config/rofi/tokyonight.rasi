@@ -17,7 +17,7 @@ element-text, element-icon , mode-switcher {
 
 window {
     background-color: @bg-col-light;
-	border: 6px solid;
+	border: 4px solid;
 	border-color: @border-col;
 }
 

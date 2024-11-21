@@ -216,9 +216,9 @@ bindsym $alt+minus resize shrink width 10 px or 10 ppt
 bindsym $alt+Shift+plus resize grow height 10 px or 10 ppt
 bindsym $alt+Shift+minus resize shrink height 10 px or 10 ppt
 
-gaps inner 6
-gaps outer -6
-gaps top -6
+gaps inner 4
+gaps outer -4
+gaps top -4
 
 default_border none
 
