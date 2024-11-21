@@ -1,13 +1,12 @@
 * {
     bg-col:  #24283b;
     bg-col-light: #292e42;
-    border-col: #3b4261;
+    border-col: #1f2335;
     selected-col: #24283b;
-    blue: #7aa2f7;
     fg-col: #a9b1d6;
     fg-col2: #7aa2f7;
     grey: #545c7e;
-    width: 500;
+    width: 600;
     font: "JetBrainsMono Nerd Font 12";
 }
 
@@ -17,10 +16,8 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-	margin: 85px 0 0 0;
     background-color: @bg-col-light;
-	border-radius: 8px;
-	border: 2px solid;
+	border: 6px solid;
 	border-color: @border-col;
 }
 
@@ -94,6 +91,6 @@ message {
 textbox {
     padding: 6px;
     margin: 20px 0px 0px 20px;
-    text-color: @blue;
+    text-color: @fg-col2;
     background-color: @bg-col-light;
 }
