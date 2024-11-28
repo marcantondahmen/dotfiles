@@ -224,6 +224,7 @@ default_border none
 
 # target                 title     	       bg    			text 			indicator   	border
 client.focused           $bgTitleFocused   $bgTitleFocused	$textFocused 	$borderFocused	$borderFocused
+client.focused_tab_title $bgTitleFocused   $bgTitleFocused	$textFocused 	$borderFocused	$borderFocused
 client.focused_inactive  $bgTitle          $bgTitle   		$text  	  		$border			$border
 client.unfocused         $bgTitle          $bgTitle   		$text  	  		$border			$border
 client.urgent            $bgTitle          $bgTitle   		$text  			$border			$border
