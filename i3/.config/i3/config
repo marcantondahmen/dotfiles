@@ -74,8 +74,8 @@ exec --no-startup-id nm-applet
 
 # Screenshot key bindings like in macOS
 exec --no-startup-id mkdir -p ~/screenshots
-bindsym $super+Shift+4 exec maim -u --select "/home/$USER/screenshots/$(date '+%Y-%m-%d_%H:%M:%S').png"
-bindsym $super+Shift+Control+4 exec maim -u --select | xclip -selection clipboard -t image/png
+bindsym $super+Shift+4 exec maim -o -u --select "/home/$USER/screenshots/$(date '+%Y-%m-%d_%H:%M:%S').png"
+bindsym $super+Shift+Control+4 exec maim -o -u --select | xclip -selection clipboard -t image/png
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
