@@ -20,7 +20,7 @@ else
 fi
 
 # Aliases
-alias ls="ls --color=always"
+alias ls='ls --color=always'
 alias la='ls -AF'
 alias ll='ls -alF'
 alias cat='bat'
