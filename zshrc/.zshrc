@@ -42,7 +42,7 @@ alias xx='exit'
 
 alias gc='git checkout'
 alias gp='git pull'
-alias gs='git status '
+alias gs='git status'
 alias gu='gitui'
 alias gl="git log \
 	--graph --decorate --branches --color \
