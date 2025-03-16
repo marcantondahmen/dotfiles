@@ -21,7 +21,8 @@ fi
 
 # Aliases
 alias ls="ls --color=always"
-alias la='ls -la'
+alias la='ls -AF'
+alias ll='ls -alF'
 alias cat='bat'
 
 alias dev=fzfProjects
@@ -39,11 +40,13 @@ alias tn='tmux new -s'
 alias tr='tmux rename-session'
 alias xx='exit'
 
-alias gc="git checkout"
-alias gp="git pull"
+alias gc='git checkout'
+alias gp='git pull'
+alias gs='git status '
+alias gu='gitui'
 alias gl="git log \
 	--graph --decorate --branches --color \
-	--pretty=format:'%>|(18)%C(blue)%h   %C(auto)%d %Creset%s %C(#1abc9c)%cr %C(#545c7e)%ce%Creset' | \
+	--pretty=format:'%C(blue) %h%C(auto)%d %Creset%s %C(#1abc9c)%cr %C(#545c7e)%ce%Creset' | \
 	less -RC"
 
 # Prompt
