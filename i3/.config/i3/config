@@ -105,10 +105,8 @@ bindsym $super+Return exec wezterm
 # start Chrome
 bindsym $super+b exec google-chrome-stable
 
-# start Yazi
-bindsym $super+y exec wezterm start -- yazi
-# make sure that key also works when changing layout
-bindsym $super+z exec wezterm start -- yazi
+# start Yazi (Manager for files)
+bindsym $super+m exec wezterm start -- yazi
 
 # kill focused window
 bindsym $super+q kill
