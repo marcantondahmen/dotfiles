@@ -14,7 +14,7 @@ if [[ $(uname) == 'Darwin' ]]; then
 fi
 
 export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_DEFAULT_OPTS="--color=16 --cycle --preview-window=border-sharp --no-scrollbar"
+export FZF_DEFAULT_OPTS="--color=16,border:#3b4261 --cycle --preview-window=border-sharp --no-scrollbar"
 
 # Custom functions
 fzfProjects() {
