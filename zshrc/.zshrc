@@ -78,3 +78,7 @@ updateTmuxEnv() {
 preexec() {
     updateTmuxEnv
 }
+
+# Default editor
+export VISUAL=nvim
+export EDITOR="$VISUAL"
