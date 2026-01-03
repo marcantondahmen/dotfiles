@@ -5,6 +5,7 @@
 [mgr]
 cwd = { fg = "#73daca" }
 
+# TODO: remove
 # Hovered
 hovered         = { reversed = true }
 preview_hovered = { underline = true }
@@ -19,11 +20,6 @@ marker_cut      = { fg = "#f7768e", bg = "#f7768e" }
 marker_marked   = { fg = "#73daca", bg = "#73daca" }
 marker_selected = { fg = "#e0af68", bg = "#e0af68" }
 
-# Tab
-tab_active   = { reversed = true }
-tab_inactive = {}
-tab_width    = 1
-
 # Count
 count_copied   = { fg = "#24283b", bg = "#41a6b5" }
 count_cut      = { fg = "#24283b", bg = "#f7768e" }
@@ -31,7 +27,7 @@ count_selected = { fg = "#24283b", bg = "#e0af68" }
 
 # Border
 border_symbol = "│"
-border_style  = { fg = "#545c7e" }
+border_style  = { fg = "#414868" }
 
 # : }}}
 
@@ -39,8 +35,8 @@ border_style  = { fg = "#545c7e" }
 # : Tabs {{{
 
 [tabs]
-active   = { fg = "#c0caf5", bg = "#24283b", bold = true }
-inactive = { fg = "#414868", bg = "#24283b" }
+active   = { fg = "#c0caf5", bg = "#1f2335", bold = true }
+inactive = { fg = "#545c7e", bg = "#1f2335" }
 
 # : }}}
 
@@ -63,11 +59,20 @@ unset_alt  = { fg = "#ff9e64", bg = "#414868" }
 # : }}}
 
 
+# : Indicator of hovered file {{{
+
+[indicator]
+parent  = { reversed = true }
+current = { reversed = true }
+preview = { underline = true }
+padding = { open = "█", close = "█" }
+
+# : }}}
+
+
 # : Status bar {{{
 
 [status]
-overall = { bg = "#1f2335" }
-
 # Permissions
 perm_sep   = { fg = "#737aa2" }
 perm_type  = { fg = "#7aa2f7" }
@@ -76,9 +81,9 @@ perm_write = { fg = "#f7768e" }
 perm_exec  = { fg = "#41a6b5" }
 
 # Progress
-# progress_label  = { fg = "#24283b", bg = "#7aa2f7", bold = true }
-# progress_normal = { fg = "#24283b", bg = "#7aa2f7" }
-# progress_error  = { fg = "#24283b", bg = "#7aa2f7" }
+progress_label  = { fg = "#c0caf5", bold = true }
+progress_normal = { fg = "#41a6b5", bg = "#545c7e" }
+progress_error  = { fg = "#e0af68", bg = "#f7768e" }
 
 # : }}}
 
@@ -117,7 +122,7 @@ border = { fg = "#7aa2f7" }
 [tasks]
 border  = { fg = "#7aa2f7" }
 title   = {}
-hovered = { fg = "#bb9af7", underline = true }
+hovered = { fg = "#bb9af7", bold = true }
 
 # : }}}
 
@@ -146,7 +151,18 @@ footer  = { fg = "#414868", bg = "#c0caf5" }
 # : }}}
 
 
-# : Notify {{{
+# : Spotter {{{
+
+[spot]
+border   = { fg = "#7aa2f7" }
+title    = { fg = "#7aa2f7" }
+tbl_col  = { fg = "#73daca" }
+tbl_cell = { fg = "#bb9af7", bg = "#545c7e" }
+
+# : }}}
+
+
+# : Notification {{{
 
 [notify]
 title_info  = { fg = "#41a6b5" }
@@ -161,19 +177,20 @@ title_error = { fg = "#f7768e" }
 [filetype]
 
 rules = [
-	# Images
+	# Image
 	{ mime = "image/*", fg = "#73daca" },
-
 	# Media
 	{ mime = "{audio,video}/*", fg = "#e0af68" },
-
-	# Archives
+	# Archive
 	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#bb9af7" },
-
-	# Documents
+	# Document
 	{ mime = "application/{pdf,doc,rtf}", fg = "#41a6b5" },
-
+	# Virtual file system
+	{ mime = "vfs/{absent,stale}", fg = "#545c7e" },
 	# Fallback
+	{ url = "*", fg = "#c0caf5" },
+	{ url = "*/", fg = "#7aa2f7" },
+	# TODO: remove
 	{ name = "*", fg = "#c0caf5" },
 	{ name = "*/", fg = "#7aa2f7" }
 ]
