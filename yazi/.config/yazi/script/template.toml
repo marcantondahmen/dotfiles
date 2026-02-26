@@ -37,6 +37,8 @@ border_style  = { fg = "${surface}" }
 [tabs]
 active   = { fg = "${text}", bg = "${surface2}", bold = true }
 inactive = { fg = "${onSurface2}", bg = "${surface2}" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
 
 # : }}}
 
@@ -73,6 +75,9 @@ padding = { open = "█", close = "█" }
 # : Status bar {{{
 
 [status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
 # Permissions
 perm_sep   = { fg = "${onSurface1}" }
 perm_type  = { fg = "${blue}" }

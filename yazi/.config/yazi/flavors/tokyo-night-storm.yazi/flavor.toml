@@ -37,6 +37,8 @@ border_style  = { fg = "#414868" }
 [tabs]
 active   = { fg = "#c0caf5", bg = "#1f2335", bold = true }
 inactive = { fg = "#545c7e", bg = "#1f2335" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
 
 # : }}}
 
@@ -73,6 +75,9 @@ padding = { open = "█", close = "█" }
 # : Status bar {{{
 
 [status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
 # Permissions
 perm_sep   = { fg = "#737aa2" }
 perm_type  = { fg = "#7aa2f7" }
