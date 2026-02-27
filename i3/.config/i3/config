@@ -108,9 +108,10 @@ bindsym $super+b exec google-chrome-stable
 # start Yazi (Manager for files)
 bindsym $super+m exec wezterm start -- yazi
 
-# map copy/paste to super+c and super+v like on macOS
-bindsym $super+c exec --no-startup-id "xclip -o | xclip -selection clipboard"
-bindsym --release $super+v exec --no-startup-id "xdotool key --clearmodifiers ctrl+v"
+# map copy/cut/paste to super+c, super+x and super+v like on macOS
+bindsym --release $super+c exec --no-startup-id "xdotool getwindowfocus key ctrl+c"
+bindsym --release $super+x exec --no-startup-id "xdotool getwindowfocus key ctrl+x"
+bindsym --release $super+v exec --no-startup-id "xdotool getwindowfocus key ctrl+v"
 
 # kill focused window
 bindsym $super+q kill
