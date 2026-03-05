@@ -31,8 +31,6 @@ config.color_scheme = 'Tokyo Night Storm'
 -- Defaults to SHIFT.
 config.bypass_mouse_reporting_modifiers = 'ALT'
 
-local winMaximizedStates = {}
-
 if isLinux then
 	-- Linux
 
@@ -46,16 +44,6 @@ if isLinux then
 	config.font_size = 12
 
 	config.keys = {
-		{
-			key = 'c',
-			mods = 'CMD',
-			action = wezterm.action.CopyTo('Clipboard'),
-		},
-		{
-			key = 'v',
-			mods = 'CMD',
-			action = wezterm.action.PasteFrom('Clipboard'),
-		},
 		{
 			key = 'v',
 			mods = 'CTRL',
