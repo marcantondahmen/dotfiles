@@ -28,6 +28,8 @@ alias cat='bat'
 alias dev=fzfProjects
 alias f=fzfFindDir
 alias ff=fzfFindFile
+alias yt='ytfzf -sl'
+alias ym='ytfzf -slm'
 
 alias srv='sh ~/MAD-Dev/server-switcher/server-switcher.sh'
 
@@ -82,3 +84,4 @@ preexec() {
 # Default editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
