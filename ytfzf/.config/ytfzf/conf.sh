@@ -6,3 +6,5 @@ enable_loop=1
 skip_thumb_download=1
 notify_playing=1
 search_again=0
+keep_vars=1
+keep_cache=1
