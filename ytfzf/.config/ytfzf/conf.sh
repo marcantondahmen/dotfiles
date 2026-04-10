@@ -1,5 +1,4 @@
 show_thumbnails=0
-is_audio_only=0
 is_detach=0
 multi_search=1
 search_result_type=all
