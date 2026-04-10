@@ -17,3 +17,7 @@ configuration {
 }
 
 @theme "tokyonight"
+
+window {
+	width: 600px;
+}

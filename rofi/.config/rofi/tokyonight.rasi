@@ -6,7 +6,6 @@
     fg-col: #a9b1d6;
     fg-col2: #7aa2f7;
     grey: #545c7e;
-    width: 600;
     font: "JetBrainsMono Nerd Font 12";
 }
 
