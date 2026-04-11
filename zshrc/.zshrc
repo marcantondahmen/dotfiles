@@ -29,6 +29,7 @@ alias dev=fzfProjects
 alias f=fzfFindDir
 alias ff=fzfFindFile
 alias yt='ytfzf -sl'
+alias ym='ytfzf -slm'
 alias yp='bash ~/dotfiles/ytfzf/.config/ytfzf/playlists.sh'
 
 alias srv='sh ~/MAD-Dev/server-switcher/server-switcher.sh'

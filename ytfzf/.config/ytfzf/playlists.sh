@@ -29,5 +29,5 @@ else
 	line=$(cat $FILE | grep "$selected")
 	url=${line#*|}
 
-	ytfzf -c youtube-playlist $url
+	ytfzf -slm -c youtube-playlist $url
 fi
