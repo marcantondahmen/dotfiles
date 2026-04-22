@@ -19,6 +19,9 @@ else
 	export TMUX_LOGS="$HOME/Desktop"
 fi
 
+# Fix escape key being captured by plugins above
+bindkey '^[' undefined-key
+
 # Aliases
 alias ls='ls --color=always'
 alias la='ls -AF'
