@@ -67,6 +67,10 @@ source ~/.config/fzf/fzf.zsh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# NPM
+# Set ignore-scripts=true globally
+export NPM_CONFIG_IGNORE_SCRIPTS=true
+
 # Fix SSH agent forwarding in tmux
 updateTmuxEnv() {
   if [ -n "$TMUX" ]; then
