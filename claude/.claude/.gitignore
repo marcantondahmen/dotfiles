@@ -2,3 +2,6 @@
 
 !.gitignore
 !settings.json
+!statusline.sh
+!themes/
+!themes/**
