@@ -19,14 +19,9 @@ effort=$(jq -r '.effort.level // "unknown"' <<<"$input")
 git_cwd=$(jq -r '.workspace.current_dir // .cwd // "."' <<<"$input")
 branch=$(git -C "$git_cwd" branch --show-current 2>/dev/null || true)
 
-# Output
-printf '%s %s%s' "$BLUE" "$cwd" "$RESET"
-
 if [[ -n "$branch" ]]; then
-	printf '  %s󰘬 %s%s' "$GREY" "$branch" "$RESET"
+	branch="  󰘬 $branch"
 fi
 
-printf '  %s󰚩 %s%s' "$GREY" "$model" "$RESET"
-printf '  %s %s%s' "$GREY" "$effort" "$RESET"
-
-printf '\n'
+# Output
+echo -e "$BLUE $cwd$GREY$branch  󰚩 $model   $effort$RESET"
