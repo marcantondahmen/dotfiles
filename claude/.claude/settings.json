@@ -4,9 +4,9 @@
 		"allow": [],
 		"deny": [
 			"Bash(git *)",
-			"Read(**/.env)",
-			"Read(**/.env.*)",
-			"Read(**/config/*.php)"
+			"Read(.env)",
+			"Read(.env.*)",
+			"Read(config/*.php)"
 		]
 	},
 	"sandbox": {
