@@ -1,6 +1,7 @@
 {
 	"permissions": {
 		"defaultMode": "plan",
+		"blockReadsOutsideWorkingDirectories": true,
 		"allow": [],
 		"deny": [
 			"Bash(git *)",
@@ -13,6 +14,7 @@
 		"enabled": true,
 		"autoAllowBashIfSandboxed": false,
 		"allowUnsandboxedCommands": false,
+		"failIfUnavailable": true,
 		"filesystem": {
 			"denyRead": ["~/**/.env", "~/**/.env.*", "~/**/config/*.php"]
 		}
