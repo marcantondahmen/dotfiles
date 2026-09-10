@@ -24,4 +24,4 @@ if [[ -n "$branch" ]]; then
 fi
 
 # Output
-echo -e "$BLUE $cwd$GREY$branch  󰚩 $model   $effort$RESET"
+echo -e "$BLUE$cwd$GREY$branch  󰚩 $model   $effort$RESET"
