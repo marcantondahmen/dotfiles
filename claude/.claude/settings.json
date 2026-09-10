@@ -1,27 +1,27 @@
 {
 	"permissions": {
-		"defaultMode": "plan",
-		"blockReadsOutsideWorkingDirectories": true,
 		"allow": [],
 		"deny": [
 			"Bash(git *)",
 			"Read(.env)",
 			"Read(.env.*)",
 			"Read(config/*.php)"
-		]
-	},
-	"sandbox": {
-		"enabled": true,
-		"autoAllowBashIfSandboxed": false,
-		"allowUnsandboxedCommands": false,
-		"failIfUnavailable": true,
-		"filesystem": {
-			"denyRead": ["~/**/.env", "~/**/.env.*", "~/**/config/*.php"]
-		}
+		],
+		"defaultMode": "plan",
+		"blockReadsOutsideWorkingDirectories": true
 	},
 	"statusLine": {
 		"type": "command",
 		"command": "bash ~/.claude/statusline.sh"
+	},
+	"sandbox": {
+		"enabled": true,
+		"failIfUnavailable": true,
+		"autoAllowBashIfSandboxed": false,
+		"allowUnsandboxedCommands": false,
+		"filesystem": {
+			"denyRead": ["~/**/.env", "~/**/.env.*", "~/**/config/*.php"]
+		}
 	},
 	"syntaxHighlightingDisabled": true,
 	"modelSettings": {
