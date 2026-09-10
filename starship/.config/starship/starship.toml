@@ -31,5 +31,5 @@ symbol = ' '
 [time]
 disabled = false
 format = '[$time](fg:8)'
-time_format = '%v %R'
+time_format = '%-d-%b-%Y %R'
 
