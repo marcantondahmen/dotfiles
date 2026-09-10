@@ -13,7 +13,7 @@ if [[ $(uname) == 'Linux' ]]; then
 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 	export TMUX_LOGS="$HOME"
 else
-	export PATH="/opt/homebrew/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:$PATH"
+	export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:$PATH"
 	BREW=$(brew --prefix)
 	source $BREW/share/zsh-autosuggestions/zsh-autosuggestions.zsh 2> /dev/null
 	export TMUX_LOGS="$HOME/Desktop"
