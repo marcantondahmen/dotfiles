@@ -26,7 +26,7 @@
 	},
 	"syntaxHighlightingDisabled": true,
 	"modelSettings": {
-		"claude-sonnet-5": {
+		"claude-sonnet-5-5": {
 			"effortLevel": "high"
 		}
 	},
