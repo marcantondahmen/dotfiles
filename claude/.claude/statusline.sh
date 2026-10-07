@@ -8,20 +8,19 @@ BLUE=$'\033[34m'
 GREY=$'\033[90m'
 
 # Data
-cwd=$(jq -r '.workspace.current_dir // .cwd // "."' <<<"$input")
-model=$(jq -r '.model.display_name // .model.id // "Claude"' <<<"$input")
-effort=$(jq -r '.effort.level // "unknown"' <<<"$input")
+cwd=$(echo "$input" | jq -r '.workspace.current_dir')
+model=$(echo "$input" | jq -r '.model.display_name')
+effort=$(echo "$input" | jq -r '.effort.level')
 
-# Shorten home directory for display
-[[ "$cwd" == "$HOME"/* ]] && cwd="~${cwd#$HOME}"
-
-# Git branch
-git_cwd=$(jq -r '.workspace.current_dir // .cwd // "."' <<<"$input")
-branch=$(git -C "$git_cwd" branch --show-current 2>/dev/null || true)
+# Branch
+branch=$(git branch --show-current 2>/dev/null || true)
 
 if [[ -n "$branch" ]]; then
 	branch="  󰘬 $branch"
 fi
+
+# Shorten home directory for display
+[[ "$cwd" == "$HOME"/* ]] && cwd="~${cwd#$HOME}"
 
 # Output
 echo -e "$BLUE$cwd$GREY$branch  󰚩 $model   $effort$RESET"
