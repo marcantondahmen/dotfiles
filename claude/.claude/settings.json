@@ -20,6 +20,9 @@
 		"failIfUnavailable": true,
 		"autoAllowBashIfSandboxed": false,
 		"allowUnsandboxedCommands": false,
+		"network": {
+			"allowLocalBinding": true
+		},
 		"filesystem": {
 			"denyRead": ["~/**/.env", "~/**/.env.*", "~/**/config/*.php"]
 		}
