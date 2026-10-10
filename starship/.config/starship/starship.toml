@@ -24,6 +24,7 @@ ignore_branches = []
 [character]
 success_symbol = '[󰁕](fg:#73daca)'
 error_symbol = '[󰁕](fg:1)'
+vimcmd_symbol = '[󰁎](fg:8)'
 
 [fill]
 symbol = ' '

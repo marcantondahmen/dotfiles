@@ -19,8 +19,9 @@ else
 	export TMUX_LOGS="$HOME/Desktop"
 fi
 
-# Fix escape key being captured by plugins above
-bindkey '^[' undefined-key
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
 
 # Aliases
 alias ls='ls --color=always'
@@ -85,4 +86,3 @@ preexec() {
 # Default editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
