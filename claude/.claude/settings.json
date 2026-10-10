@@ -34,5 +34,6 @@
 		}
 	},
 	"theme": "custom:ansi",
+	"editorMode": "vim",
 	"model": "sonnet"
 }
