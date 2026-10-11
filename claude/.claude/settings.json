@@ -20,6 +20,7 @@
 		"failIfUnavailable": true,
 		"autoAllowBashIfSandboxed": false,
 		"allowUnsandboxedCommands": false,
+		"excludedCommands": ["docker compose *"],
 		"network": {
 			"allowLocalBinding": true
 		},
