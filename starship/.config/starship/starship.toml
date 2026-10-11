@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = true
-format = '$hostname$directory$git_branch$fill$time$line_break$character'
+format = '$hostname${custom.colima_up}$directory$git_branch$fill$time$line_break$character'
 
 [hostname]
 ssh_only = false
@@ -34,3 +34,9 @@ disabled = false
 format = '[$time](fg:8)'
 time_format = '%-d-%b-%Y %R'
 
+[custom.colima_up]
+os = "macos"
+when = "colima status"
+command = "echo  "
+format = "[$output ]($style) "
+style = "fg:4"

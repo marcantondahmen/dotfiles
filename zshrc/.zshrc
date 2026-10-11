@@ -56,6 +56,9 @@ alias gl="git log \
 	--pretty=format:'%C(blue) %h%C(auto)%d %Creset%s %C(#1abc9c)%cr %C(#545c7e)%ce%Creset' | \
 	less -RC"
 
+alias cstart='colima start --cpu 2 --memory 3 --disk 60 --vm-type vz --vz-rosetta'
+alias cstop='colima stop'
+
 # Prompt
 autoload -Uz compinit && compinit
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
