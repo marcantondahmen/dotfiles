@@ -2,6 +2,7 @@
 
 add_newline = true
 format = '$hostname${custom.colima_up}$directory$git_branch$fill$time$line_break$character'
+command_timeout = 1000
 
 [hostname]
 ssh_only = false
