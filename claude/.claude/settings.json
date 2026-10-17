@@ -21,13 +21,13 @@
 		"failIfUnavailable": true,
 		"autoAllowBashIfSandboxed": false,
 		"allowUnsandboxedCommands": false,
-		"excludedCommands": ["docker compose *"],
 		"network": {
 			"allowLocalBinding": true
 		},
 		"filesystem": {
 			"denyRead": ["~/**/.env", "~/**/.env.*", "~/**/config/*.php"]
-		}
+		},
+		"excludedCommands": ["docker compose *"]
 	},
 	"syntaxHighlightingDisabled": true,
 	"modelSettings": {
@@ -39,5 +39,7 @@
 		}
 	},
 	"theme": "custom:ansi",
-	"editorMode": "vim"
+	"editorMode": "vim",
+	"agentPushNotifEnabled": true,
+	"switchModelsOnFlag": true
 }
