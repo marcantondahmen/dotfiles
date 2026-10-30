@@ -35,11 +35,12 @@
 			"effortLevel": "high"
 		},
 		"claude-opus-5-5": {
-			"effortLevel": "high"
+			"effortLevel": "high",
+			"autoCompactWindow": 400000
 		}
 	},
 	"theme": "custom:ansi",
 	"editorMode": "vim",
-	"agentPushNotifEnabled": true,
-	"switchModelsOnFlag": true
+	"switchModelsOnFlag": true,
+	"agentPushNotifEnabled": true
 }
