@@ -6,7 +6,7 @@ selection=$(
 			jq -r '.scripts | keys[] | "npm\t" + . + "\t  " + .' package.json
 		fi
 
-		fd -e sh -d 3 | sed $'s|.*|bash\t&\t  &|'
+		fd -e sh -d 2 | sed $'s|.*|bash\t&\t  &|'
 	} | fzf --delimiter=$'\t' --with-nth=3 --layout=reverse
 )
 
