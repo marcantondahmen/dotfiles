@@ -61,8 +61,8 @@ else
 	-- Use pt as unit in order to get the same visual result on an external display
 	-- and the internal retina display of a MacBook.
 	config.window_padding = {
-		left = '7pt',
-		right = '7pt',
+		left = '10pt',
+		right = '10pt',
 		top = '7pt',
 		bottom = '7pt',
 	}
