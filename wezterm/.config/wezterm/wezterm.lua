@@ -139,4 +139,29 @@ config.hyperlink_rules = {
 	},
 }
 
+-- Make notifications work for Claude Code
+local function notify(title, body)
+	body = body:gsub('"', "'")
+	if wezterm.target_triple:find('darwin') then
+		wezterm.background_child_process({
+			'osascript',
+			'-e',
+			string.format('display notification "%s" with title "%s"', body, title),
+		})
+	else
+		wezterm.background_child_process({ 'notify-send', title, body })
+	end
+end
+
+wezterm.on('bell', function(window, pane)
+	-- ignore duplicate bell events within the same second
+	local now = os.time()
+	if wezterm.GLOBAL.last_bell == now then
+		return
+	end
+	wezterm.GLOBAL.last_bell = now
+
+	notify('WezTerm', pane:get_title())
+end)
+
 return config

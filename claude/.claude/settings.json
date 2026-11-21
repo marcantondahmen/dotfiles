@@ -41,6 +41,7 @@
 	},
 	"theme": "custom:ansi",
 	"editorMode": "vim",
+	"preferredNotifChannel": "terminal_bell",
 	"switchModelsOnFlag": true,
 	"agentPushNotifEnabled": true
 }
